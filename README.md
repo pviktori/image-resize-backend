@@ -24,11 +24,21 @@ This Node.js application provides services for handling image uploads, storing m
    git clone https://github.com/your-username/your-repository.git
    cd your-repository
 
-## Create a .env file in the root directory and add your AWS configuration:
+2. ** Create a .env file in the root directory and add your AWS configuration: **
 
-```bash
-AWS_ACCESS_KEY_ID=your-access-key-id
-AWS_SECRET_ACCESS_KEY=your-secret-access-key
-AWS_REGION=your-region
-AWS_DYNAMODB_TABLE_NAME=your-dynamodb-table-name
-AWS_S3_BUCKET_NAME=your-s3-bucket-name
+   ```bash
+   AWS_ACCESS_KEY_ID=your-access-key-id
+   AWS_SECRET_ACCESS_KEY=your-secret-access-key
+   AWS_REGION=your-region
+   AWS_DYNAMODB_TABLE_NAME=your-dynamodb-table-name
+   AWS_S3_BUCKET_NAME=your-s3-bucket-name
+
+3. **Prepare Lambda trigger on POST/PUT actions in S3 Bucket**
+
+   Find lambda function in /lambdas folder.
+
+4. Run the application in 2 Steps:
+
+   ```bash
+   npm run shell
+   npm run start
