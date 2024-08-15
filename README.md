@@ -24,7 +24,7 @@ This Node.js application provides services for handling image uploads, storing m
    git clone https://github.com/your-username/your-repository.git
    cd your-repository
 
-2. ** Create a .env file in the root directory and add your AWS configuration: **
+2. **Create a .env file in the root directory and add your AWS configuration:**
 
    ```bash
    AWS_ACCESS_KEY_ID=your-access-key-id
