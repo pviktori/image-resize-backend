@@ -37,7 +37,7 @@ This Node.js application provides services for handling image uploads, storing m
 
    Find lambda function in /lambdas folder.
 
-4. Run the application in 2 Steps:
+4. **Run the application in 2 Steps:**
 
    ```bash
    npm run shell
