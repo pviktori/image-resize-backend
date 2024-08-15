@@ -26,6 +26,7 @@ This Node.js application provides services for handling image uploads, storing m
 
 ## Create a .env file in the root directory and add your AWS configuration:
 
+```bash
 AWS_ACCESS_KEY_ID=your-access-key-id
 AWS_SECRET_ACCESS_KEY=your-secret-access-key
 AWS_REGION=your-region
