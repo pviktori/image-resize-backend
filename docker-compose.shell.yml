@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - '8080:8080'
+    environment:
+      IMAGE_RESIZE_PORT: ${IMAGE_RESIZE_PORT}
+      AWS_S3_BUCKET_NAME: ${AWS_S3_BUCKET_NAME}
+      AWS_REGION: ${AWS_REGION}
+      AWS_DYNAMODB_TABLE_NAME: ${AWS_DYNAMODB_TABLE_NAME}
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+    command: /bin/bash
+    stdin_open: true
+    tty: true

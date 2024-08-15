@@ -1,0 +1,31 @@
+{
+  "name": "image-resize-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "shell": "npm run shell:build && docker-compose  -f docker-compose.shell.yml run --rm --service-ports --name image-resize app bash || true && echo Stopping environment... && npm run shell:stop",
+    "shell:build": "docker-compose -f docker-compose.shell.yml build",
+    "shell:stop": "docker-compose -f docker-compose.shell.yml down"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1566.0",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.0",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0"
+  }
+ 
+}
